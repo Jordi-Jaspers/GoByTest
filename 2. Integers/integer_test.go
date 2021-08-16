@@ -8,6 +8,12 @@ func TestAdder(t *testing.T) {
 		expected := 4
 		assertCorrectCalculations(t, expected, sum)
 	})
+
+	t.Run("The fucntion still works with multiple arguments", func(t *testing.T) {
+		sum := add(2, 2, 4, 3)
+		expected := 11
+		assertCorrectCalculations(t, expected, sum)
+	})
 }
 
 func assertCorrectCalculations(t testing.TB, sum int, expected int) {
