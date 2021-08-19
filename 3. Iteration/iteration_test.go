@@ -4,8 +4,8 @@ import "testing"
 
 // testing.T gives you access to test code.
 func TestRepeat(t *testing.T) {
-	repeated := Repeat("a")
-	expected := "aaaaa"
+	repeated := Repeat("a", 10)
+	expected := "aaaaaaaaaa"
 
 	assert(t, repeated, expected)
 }
@@ -15,7 +15,7 @@ func TestRepeat(t *testing.T) {
 // go test -bench=. will run the test 10 000 000 times
 func BenchmarkRepeat(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		Repeat("a")
+		Repeat("a", 10)
 	}
 }
 
