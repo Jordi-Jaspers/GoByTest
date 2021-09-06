@@ -48,7 +48,7 @@ Learning Go (Made by Google) by test-driven examples to promote test-driven deve
 * Adding methods so you can add functionality to your data types and so you can implement interfaces
 * Table driven tests to make your assertions clearer and your test suites easier to extend & maintain
 
-**Code Wars**
+**Code Wars**  
 All these challenges are from <https://www.codewars.com/kata/>.
 ### References
 
