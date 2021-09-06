@@ -49,7 +49,7 @@ Learning Go (Made by Google) by test-driven examples to promote test-driven deve
 * Table driven tests to make your assertions clearer and your test suites easier to extend & maintain
 
 **Code Wars**  
-All these challenges are from <https://www.codewars.com/kata/>.
+All these challenges are from <https://www.codewars.com/users/Jordi-Jaspers>.
 ### References
 
 * Troubleshooting: <https://stackoverflow.com/>
