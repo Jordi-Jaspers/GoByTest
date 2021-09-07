@@ -65,6 +65,18 @@ Learning Go (Made by Google) by test-driven examples to promote test-driven deve
 * Useful for adding more domain specific meaning to values
 * Can let you implement interfaces
 
+**Chapter 7**
+* Full CRUD dictionary API
+* Create maps
+* Search for items in maps
+* Add new items to maps
+* Update items in maps
+* Delete items from a map
+* Learned more about errors
+* How to create errors that are constants
+* Writing error wrappers
+
+**Chapter 8**
 
 **Code Wars**  
 All these challenges are from <https://www.codewars.com/users/Jordi-Jaspers>.
