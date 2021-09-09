@@ -85,7 +85,7 @@ Motivated by our tests we refactored the code so we could control where the data
 **Chapter 9**  
 
 
-**Code Wars**  
+### Code Wars
 All these challenges are from <https://www.codewars.com/users/Jordi-Jaspers>.
 ### References
   
