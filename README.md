@@ -83,8 +83,19 @@ Motivated by our tests we refactored the code so we could control where the data
 * Allow our code to be re-used in different contexts The first "new" context our code can be used in is inside tests. But further on if someone wants to try something new with your function they can inject their own dependencies.  
   
 **Chapter 9**  
+* Mocking
+* Without mocking important areas of your code will be untested.
+* Without mocks you may have to set up databases and other third parties things just to test simple business rules. You're likely to have slow tests, resulting in slow feedback loops.
+* By having to spin up a database or a webservice to test something you're likely to have fragile tests due to the unreliability of such services.
+* Reference to Martin Fowler: <https://martinfowler.com/bliki/TestDouble.html>
 
-
+#### Mock Definitions by Martin Fowler
+* **Dummies:** objects are passed around but never actually used. Usually they are just used to fill parameter lists.
+* **Fakes:** objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (an InMemoryTestDatabase is a good example).
+* **Stubs:** provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test.
+* **Spies:** are stubs that also record some information based on how they were called. One form of this might be an email service that records how many messages it was sent.
+* **Mocks:** are pre-programmed with expectations which form a specification of the calls they are expected to receive. They can throw an exception if they receive a call they don't expect and are checked during verification to ensure they got all the calls they were expecting.
+  
 ### Code Wars
 All these challenges are from <https://www.codewars.com/users/Jordi-Jaspers>.
 ### References
