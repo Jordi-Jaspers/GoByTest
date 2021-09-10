@@ -128,6 +128,17 @@ Motivated by our tests we refactored the code so we could control where the data
 * channels, to help organize and control the communication between the different processes, allowing us to avoid a race condition bug.
 * the race detector which helped us debug problems with concurrent code
 
+**Chapter 11**  
+**select**
+
+* Helps you wait on multiple channels.
+* Sometimes you'll want to include time.After in one of your cases to prevent your system blocking forever.
+
+**httptest**
+
+* A convenient way of creating test servers so you can have reliable and controllable tests.
+* Using the same interfaces as the "real" net/http servers which is consistent and less for you to learn.
+  
 ## Application <a name = "application"></a>
 
 ## Meta <a name = "meta"></a>
