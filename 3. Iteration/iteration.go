@@ -2,7 +2,6 @@ package iteration
 
 import (
 	"fmt"
-	"strings"
 )
 
 func Repeat(char string, repititions int) string {
