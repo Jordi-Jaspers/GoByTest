@@ -138,6 +138,28 @@ Motivated by our tests we refactored the code so we could control where the data
 
 * A convenient way of creating test servers so you can have reliable and controllable tests.
 * Using the same interfaces as the "real" net/http servers which is consistent and less for you to learn.
+
+**Chapter 12**
+* Introduced some of the concepts from the reflect package.
+* Used recursion to traverse arbitrary data structures.
+* Avoid reflection: <https://go.dev/blog/laws-of-reflection>
+
+**Chapter 13**
+* Mutex allows us to add locks to our data.
+* Waitgroup is a means of waiting for goroutines to finish jobs.
+* Do not expose structs with Mutex or other sensitive data. Try to create a func that passes a reference.
+* use __'Go vet'__ to find bugs or subtle mistakes.
+* Don't use embedding because it's convenient, this is a very bad practice because of exposing your API.
+
+#### Mutex OR Channels
+"Share memory by communicating, don't communicate by sharing memory." - Golang 2020  
+The general rule is not to overuse both and consider the effectiveness in your use case. Commenly used practices consider the following.  
+**Channel** -> passing ownership of data, distributing units of work, communicating async results  
+**Mutex** ->  caches, state  
+
+**Chapter 14**
+
+
   
 ## Application <a name = "application"></a>
 
