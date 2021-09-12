@@ -31,7 +31,7 @@ Learning Go (Made by Google) by test-driven examples to promote test-driven deve
 - [TODO](#todo)
 - [Code Wars](#code_wars)
 - [Built Using](#built_using)
-- [References](#acknowledgement)
+- [References](#references)
 
 ## Go Fundamentals <a name = "fundamentals"></a>
 **Chapter 1**
@@ -158,9 +158,34 @@ The general rule is not to overuse both and consider the effectiveness in your u
 **Mutex** ->  caches, state  
 
 **Chapter 14**
+* How to test a HTTP handler that has had the request cancelled by the client.
+* How to use context to manage cancellation.
+* How to write a function that accepts context and uses it to cancel itself by using goroutines, select and channels.
+* Follow Google's guidelines as to how to manage cancellation by propagating request scoped context through your call-stack.
+* How to roll your own spy for http.ResponseWriter if you need it.
 
+#### Google guidelines about canceling request  
+At Google, we require that Go programmers pass a Context parameter as the first argument to every function on the call path between incoming and outgoing requests. This allows Go code developed by many different teams to interoperate well. It provides simple control over timeouts and cancelation and ensures that critical values like security credentials transit Go programs properly. source: <https://go.dev/blog/context>  
 
-  
+```Go
+type Store interface {
+	Fetch(ctx context.Context) (string, error)
+}
+
+//Http.Handler creates server that fetches the store data.
+func Server(store Store) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		data, err := store.Fetch(r.Context())
+
+		if err != nil {
+			return // todo: log error however you like
+		}
+
+		fmt.Fprint(w, data)
+	}
+}
+```
+
 ## Application <a name = "application"></a>
 
 ## Meta <a name = "meta"></a>
