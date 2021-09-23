@@ -186,6 +186,12 @@ func Server(store Store) http.HandlerFunc {
 }
 ```
 
+**Chapter 15**
+* Built into the standard library
+* If you can think of ways to describe your domain rules in code, they are an excellent tool for giving you more confidence
+* Force you to think about your domain deeply
+* Potentially a nice complement to your test suite
+
 ## Application <a name = "application"></a>
 
 ## Meta <a name = "meta"></a>
