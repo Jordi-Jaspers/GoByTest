@@ -94,7 +94,7 @@ func (w windowedRoman) Symbols() (symbols [][]byte) {
 	return
 }
 
-// Check wether the roman symbal can be substracted.
+// Check wether the roman symbol can be substracted.
 func isSubtractive(symbol uint8) bool {
 	return symbol == 'I' || symbol == 'X' || symbol == 'C'
 }

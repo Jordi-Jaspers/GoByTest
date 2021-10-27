@@ -193,6 +193,13 @@ func Server(store Store) http.HandlerFunc {
 * Potentially a nice complement to your test suite
 
 ## Application <a name = "application"></a>
+The application must have the following endpoints:
+
+* `GET /players/{name}`  
+should return a number indicating the total number of wins
+  
+* `POST /players/{name}`  
+should record a win for that name, incrementing for every subsequent POST
 
 ## Meta <a name = "meta"></a>
 
